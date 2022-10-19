@@ -28,6 +28,13 @@
     padding: 0 20px;
     border: 1px solid;
     border-radius: 0;
+    margin-bottom: 10px;
+  }
+}
+.label {
+  display: flex;
+  & label {
+    width: 100px;
   }
 }
 
@@ -39,10 +46,6 @@
 
   & button {
     padding: 0 20px;
-  }
-
-  & span {
-    margin: 0 250px;
   }
 }
 
@@ -60,8 +63,4 @@
 .save-button {
   border-color: #00bfff;
   background-color: #87cefa;
-}
-
-.delete-button {
-  background-color: darkorange;
 }

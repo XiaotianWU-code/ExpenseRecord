@@ -5,34 +5,46 @@
 
   <form class="containter">
     <div class="body">
-      <input
-        class="item-desc"
-        [(ngModel)]="item.description"
-        #itemDesc="ngModel"
-        name="description"
-        placeholder="Description"
-      />
-      <input
-        class="item-desc"
-        [(ngModel)]="item.type"
-        #itemType="ngModel"
-        name="type"
-        placeholder="Type"
-      />
-      <input
-        class="item-desc"
-        [(ngModel)]="item.money"
-        #itemMoney="ngModel"
-        name="money"
-        placeholder="Money"
-      />
-      <input
-        class="item-desc"
-        [(ngModel)]="item.date"
-        #itemDate="ngModel"
-        name="date"
-        type="date"
-      />
+      <div class="label">
+        <label for="description">Description</label>
+        <input
+          class="item-desc"
+          [(ngModel)]="item.description"
+          #itemDesc="ngModel"
+          name="description"
+          placeholder="Description"
+        />
+      </div>
+      <div class="label">
+        <label for="type">Type</label>
+        <input
+          class="item-desc"
+          [(ngModel)]="item.type"
+          #itemType="ngModel"
+          name="type"
+          placeholder="Type"
+        />
+      </div>
+      <div class="label">
+        <label for="money">Amount</label>
+        <input
+          class="item-desc"
+          [(ngModel)]="item.money"
+          #itemMoney="ngModel"
+          name="money"
+          placeholder="Money"
+        />
+      </div>
+      <div class="label">
+        <label for="date">Date</label>
+        <input
+          class="item-desc"
+          [(ngModel)]="item.date"
+          #itemDate="ngModel"
+          name="date"
+          type="date"
+        />
+      </div>
     </div>
 
     <div class="footer">
