@@ -3,4 +3,5 @@ export interface RecordModel {
   type: string;
   money?: number;
   date?: string;
+  id?: string;
 }

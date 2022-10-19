@@ -10,6 +10,7 @@
         <span class="item-type">{{ item.type }}</span>
         <span class="item-money">{{ item.money }}</span>
         <span class="item-date">{{ item.date | date }}</span>
+        <button (click)="delete(item.id)">Delete</button>
       </div>
     </div>
 

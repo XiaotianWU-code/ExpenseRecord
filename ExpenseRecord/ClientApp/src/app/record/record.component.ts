@@ -29,6 +29,17 @@ export class RecordComponent implements OnInit {
     });
   }
 
+  delete(id: string | undefined) {
+    if (id) {
+      this.recordService.deleteOne(id).subscribe((_) => {
+        console.log('delete one: ', id);
+        this.loadData();
+      });
+    } else {
+      console.log('id is undefine');
+    }
+  }
+
   private loadData() {
     this.recordService
       .getAll()

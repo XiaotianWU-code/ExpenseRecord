@@ -31,6 +31,8 @@ export class RecordService {
 
   deleteOne(id: string) {
     console.log('deleteOne: ', id);
-    return this.http.delete<any>(`${this.baseUrl}/${id}`);
+    return this.http.delete<any>(`${this.baseUrl}/${id}`, {
+      responseType: 'text' as 'json',
+    });
   }
 }
