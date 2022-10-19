@@ -46,21 +46,16 @@ export class RecordComponent implements OnInit {
       .pipe(
         takeUntil(this.destroy),
         catchError(() => {
-          console.log('in catch error: ');
           this.displayItems = [];
           return EMPTY;
         })
       )
       .subscribe((res) => {
-        console.log('in subscribe: ');
-        console.log('res.lenght: ', res.length);
         if (res.length <= 0) {
           this.displayItems = [];
         } else {
           this.displayItems = [...res];
         }
-        console.log('this.displayItems: ', this.displayItems);
-        console.log('this.res: ', res);
       });
   }
 }

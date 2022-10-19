@@ -26,12 +26,24 @@
         name="money"
         placeholder="Money"
       />
+      <input
+        class="item-desc"
+        [(ngModel)]="item.date"
+        #itemDate="ngModel"
+        name="date"
+        type="date"
+      />
     </div>
 
     <div class="footer">
       <button
         (click)="saveItem()"
-        [disabled]="!itemDesc.dirty && !itemType.dirty && !itemMoney.dirty"
+        [disabled]="
+          !itemDesc.dirty &&
+          !itemType.dirty &&
+          !itemMoney.dirty &&
+          !itemDate.dirty
+        "
         class="save-button"
       >
         Save

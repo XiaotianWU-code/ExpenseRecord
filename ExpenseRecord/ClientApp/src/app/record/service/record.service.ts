@@ -23,6 +23,7 @@ export class RecordService {
       description: body?.description,
       type: body?.type,
       money: body?.money,
+      date: body?.date,
     };
     return this.http.post<any>(this.baseUrl, record, {
       responseType: 'text' as 'json',

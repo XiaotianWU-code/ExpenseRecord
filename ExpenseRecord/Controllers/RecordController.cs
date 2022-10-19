@@ -31,7 +31,7 @@ public class RecordController : ControllerBase
                 Description = item.Description,
                 Type = item.Type,
                 Money = item.Money,
-                Date = DateTime.Now
+                Date = item.Date,
             };
             Records.Insert(0, newItem);
 
