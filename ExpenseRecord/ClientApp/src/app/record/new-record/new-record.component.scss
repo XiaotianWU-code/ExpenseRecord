@@ -1,0 +1,66 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 100%;
+  width: 750px;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.containter {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.body {
+  display: flex;
+  border: 1px solid black;
+  border-radius: 10px;
+  flex: 1 1 auto;
+  padding: 5px 10px;
+
+  & input {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border: 1px solid;
+    border-radius: 0;
+  }
+}
+
+.footer {
+  display: flex;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 10px;
+
+  & button {
+    padding: 0 20px;
+  }
+
+  & span {
+    margin: 0 250px;
+  }
+}
+
+.back-button {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 20px;
+  border: 1px solid;
+  border-radius: 0;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+
+.save-button {
+  border-color: #00bfff;
+  background-color: #87cefa;
+}
+
+.delete-button {
+  background-color: darkorange;
+}

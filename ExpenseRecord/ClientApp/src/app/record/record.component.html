@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head> </head>
+<body>
+  <div class="containter">
+    <h1>Record List</h1>
+
+    <div class="items">
+      <div class="items-content" *ngFor="let item of displayItems">
+        <span class="item-desc">{{ item.description }}</span>
+      </div>
+    </div>
+
+    <button class="create-button" (click)="navToNew()">Create Record</button>
+  </div>
+</body>

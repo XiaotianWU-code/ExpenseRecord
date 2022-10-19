@@ -1,0 +1,26 @@
+<div class="wrapper">
+  <div class="header">
+    <button class="back-button" (click)="navToList()">Back to the List</button>
+  </div>
+
+  <form class="containter">
+    <div class="body">
+      <input
+        class="item-desc"
+        [(ngModel)]="item.description"
+        #itemDesc="ngModel"
+        name="description"
+      />
+    </div>
+
+    <div class="footer">
+      <button
+        (click)="saveItem()"
+        [disabled]="!itemDesc.dirty"
+        class="save-button"
+      >
+        Save
+      </button>
+    </div>
+  </form>
+</div>
