@@ -15,9 +15,7 @@ export class RecordService {
   }
 
   getAll(): Observable<RecordModel[]> {
-    return this.http.get<RecordModel[]>(this.baseUrl, {
-      responseType: 'text' as 'json',
-    });
+    return this.http.get<RecordModel[]>(this.baseUrl);
   }
 
   createOne(body: RecordModel): Observable<any> {

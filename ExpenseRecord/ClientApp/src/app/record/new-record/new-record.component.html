@@ -10,13 +10,28 @@
         [(ngModel)]="item.description"
         #itemDesc="ngModel"
         name="description"
+        placeholder="Description"
+      />
+      <input
+        class="item-desc"
+        [(ngModel)]="item.type"
+        #itemType="ngModel"
+        name="type"
+        placeholder="Type"
+      />
+      <input
+        class="item-desc"
+        [(ngModel)]="item.money"
+        #itemMoney="ngModel"
+        name="money"
+        placeholder="Money"
       />
     </div>
 
     <div class="footer">
       <button
         (click)="saveItem()"
-        [disabled]="!itemDesc.dirty"
+        [disabled]="!itemDesc.dirty && !itemType.dirty && !itemMoney.dirty"
         class="save-button"
       >
         Save

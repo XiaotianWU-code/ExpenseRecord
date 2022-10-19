@@ -1,6 +1,7 @@
 import { RecordModel } from './../models/Record';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { RecordService } from '../service/record.service';
 
 @Component({
   selector: 'app-new-record',
@@ -9,11 +10,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NewRecordComponent implements OnInit {
   item = { description: 'new item' } as RecordModel;
-  constructor(private router: Router, private route: ActivatedRoute) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private recordService: RecordService
+  ) {}
 
   ngOnInit(): void {
     this.item = {
-      description: 'new item',
+      description: '',
+      type: '',
     };
   }
 
@@ -25,5 +31,8 @@ export class NewRecordComponent implements OnInit {
 
   saveItem() {
     console.log('save Item: ', this.item);
+    this.recordService.createOne(this.item).subscribe((_) => {
+      this.navToList();
+    });
   }
 }

@@ -4,9 +4,12 @@
   <div class="containter">
     <h1>Record List</h1>
 
-    <div class="items">
+    <div class="items" *ngIf="displayItems">
       <div class="items-content" *ngFor="let item of displayItems">
         <span class="item-desc">{{ item.description }}</span>
+        <span class="item-type">{{ item.type }}</span>
+        <span class="item-money">{{ item.money }}</span>
+        <span class="item-date">{{ item.date | date }}</span>
       </div>
     </div>
 

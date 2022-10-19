@@ -1,5 +1,6 @@
 export interface RecordModel {
   description: string;
   type: string;
-  money: number;
+  money?: number;
+  date?: string;
 }
