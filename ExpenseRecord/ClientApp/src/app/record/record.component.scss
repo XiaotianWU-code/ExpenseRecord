@@ -12,60 +12,16 @@ h1 {
   text-align: center;
 }
 
-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-#searchText {
-  flex: 1 1 auto;
-  height: 46px;
-  font-size: 15px;
-}
-
 button {
   height: 50px;
   font-size: 15px;
   cursor: pointer;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.buttons button {
-  /* width: 33.33% */
-  flex: 1 1 0;
-  margin-bottom: 10px;
-}
-
-.buttons button:nth-child(-n + 2) {
-  margin-right: 5px;
-}
-
 .reload-button {
   height: 50px;
   width: 100px;
   margin-left: 30px;
-}
-
-.items-content {
-  margin: 30px 30px;
-  text-align: center;
-  border: 1px solid;
-  font-size: 25px;
-  height: 50px;
-  line-height: 50px;
-  display: flex;
-}
-
-.item-desc {
-  margin-left: 15px;
 }
 
 .items {
@@ -82,8 +38,4 @@ button {
 
 .create-button:hover {
   background-color: cornflowerblue;
-}
-
-#addForm {
-  margin: 10px 30px;
 }
